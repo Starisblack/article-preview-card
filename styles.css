@@ -1,0 +1,247 @@
+body{
+  text-align: center;
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.container{
+  position: relative;
+  top: 200px;
+  width: 70%;
+  height: 30%;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+}
+
+.column1, .column2{
+  background-color: white;
+  max-height: 350px;
+}
+
+
+.column1{
+  border-radius: 10px 0 0 10px;
+}
+
+.column2{
+  width: 75%;
+  padding-left: 5%;
+  border-radius: 0 10px 10px 0;
+}
+
+.drawer-img{
+  width: 120%;
+  height: 100%;
+  z-index: -1;
+    border-radius: 10px 0 0 10px;
+}
+
+.head-text{
+  text-align: left;
+  width: 90%;
+  letter-spacing: 2px;
+}
+
+.paragragh{
+  width: 80%;
+  text-align: left;
+  line-height: 2;
+}
+
+.profile-details{
+ display: grid;
+ grid-template-columns: 100px 150px auto;
+ margin-top: 30px;
+}
+
+.profile-pic{
+width: 70%;
+border-radius: 100%;
+}
+
+.username{
+ position: relative;
+ right: 35px;
+}
+
+.date{
+  margin-top: 5px;
+  opacity: 50%;
+}
+
+.share-img{
+text-align: center;
+}
+
+.share-icon{
+  padding: 6px;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 100%;
+}
+
+.share-icon:hover{
+  background-color: hsl(212, 23%, 69%);
+}
+
+h4, h5{
+  margin: 0;
+}
+
+.share-box{
+  cursor: pointer;
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: 80px 50px 50px 50px;
+  background-color: hsl(217, 19%, 35%);
+  opacity: 80%;
+  width: 20%;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+  position: absolute;
+  top: 55%;
+  right: 4%;
+  z-index: 1;
+}
+
+.share-text{
+  letter-spacing: 4px;
+  padding: 0 4px;
+  font-size: 0.8rem;
+  opacity: 80%;
+}
+
+.icons{
+  position: relative;
+  top: 10px;
+}
+
+.icons:hover{
+  background-color: hsl(210, 46%, 95%);
+}
+.share-icon2{
+  display: none;
+}
+
+.share-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.attribution{
+  margin-top: 15px;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@media screen and (max-width: 1100px) {
+
+  .container{
+    position: relative;
+    top: 50px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .drawer-img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .column1{
+    border-radius: 10px 10px 0 0;
+  }
+
+
+  .column2{
+    width: 100%;
+    padding: 0 0 5% 5%;
+    border-radius: 0 0px 10px 10px;
+    max-height: 400px;
+  }
+
+  .share-box{
+    padding: 4% 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 86%;
+    grid-template-columns: auto 50px 50px 50px auto;
+    z-index: 1;
+    opacity: 100%;
+  }
+
+
+  .share-box::after {
+    display: none;
+  }
+
+  .share-icon2{
+    display: block;
+    padding: 6px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+    left: 15px;
+  }
+
+  .share-text{
+    padding-left: 5%;
+  }
+
+  .share-icon2:hover{
+    background-color: hsl(212, 23%, 69%);
+  }
+
+
+
+}
+
+@media screen and (max-width: 1100px) {
+  .head-text{
+    width: 90%;
+    letter-spacing: 0;
+    font-size: 0.7rem;
+  }
+
+  .paragragh{
+    width: 90%;
+    line-height: 2;
+  }
+
+  .share-box{
+    position: absolute;
+    left: 0;
+    top: 84%;
+  }
+
+}
